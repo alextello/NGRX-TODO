@@ -19,8 +19,7 @@ export class TodoAddComponent implements OnInit {
     if (this.txtInput.invalid) {
       return;
     }
-
-    this.store.dispatch(crear(this.txtInput.value));
+    this.store.dispatch(crear({ texto: this.txtInput.value }));
     this.txtInput.reset();
   }
 
